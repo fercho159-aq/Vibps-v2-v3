@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes | ViBPS Antisocial Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 229, 255, 0.1);
+        }
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--secondary-color);
+            display: none;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-item.active {
+            border-color: var(--primary-color);
+            box-shadow: var(--neon-glow);
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header" class="scrolled">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.jpeg" alt="ViBPS Logo" style="height: 50px; display: inline-block; vertical-align: middle;">
+                    <span>_MX</span>
+                </a>
+            </div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="preventas.html">Preventas</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="entretenimiento.html">Show</a></li>
+                    <li><a href="historias.html">Historias</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-padding" style="margin-top: 80px;">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="tagline">AYUDA</span>
+                <h2>PREGUNTAS FRECUENTES</h2>
+                <p>Todo lo que necesitas saber sobre accesos, pagos y producción.</p>
+            </div>
+
+            <div class="faq-list reveal" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        ¿Cómo compro mis boletos para un evento?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Puedes adquirirlos directamente en nuestra sección de "Preventas". Aceptamos tarjetas de crédito/débito y transferencias. Una vez confirmado el pago, recibirás un código QR exclusivo en tu correo.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        ¿Hacen eventos fuera de la CDMX?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Sí, tenemos capacidad de movilidad nacional e internacional. Contáctanos para discutir los requerimientos logísticos específicos de tu locación.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        ¿Qué incluye el servicio de producción integral?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Incluye desde el diseño creativo y scouting de locación hasta el montaje técnico (audio, iluminación, video), catering, seguridad y coordinación de talento.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <h3>ViBPS<span>_MX</span></h3>
+                    <p>ViBPS Antisocial Club &copy; 2024. CDMX.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="preventas.html">Preventas</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Dirección Creativa: Fernando Rodríguez de la Chesnaye.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
