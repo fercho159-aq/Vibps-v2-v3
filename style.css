@@ -18,6 +18,10 @@
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+html {
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -577,21 +581,35 @@ footer {
         top: -100%;
         left: 0;
         width: 100%;
+        z-index: 999;
         background: var(--bg-color);
         padding: 4rem 2rem;
         transition: var(--transition);
     }
-    
+
     #nav-menu.active {
         top: 0;
     }
-    
+
     #nav-menu ul {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .hero-ctas {
         flex-direction: column;
+    }
+
+    #countdown {
+        gap: 0.75rem;
+    }
+
+    .time-block {
+        min-width: 60px;
+        padding: 0.75rem 0.5rem;
+    }
+
+    .time-block span {
+        font-size: 1.5rem;
     }
 }
