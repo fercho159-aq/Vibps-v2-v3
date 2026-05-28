@@ -154,14 +154,28 @@ h2::after {
     cursor: pointer;
 }
 
+.nav-close {
+    display: none;
+}
+
 /* Hero Section */
 #hero {
     height: 100vh;
-    background: url('assets/images/img-hero.jpeg') no-repeat center 40%/cover;
+    background-color: #000B28;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
+}
+
+.hero-img-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: auto;
+    z-index: 1;
 }
 
 .hero-overlay {
@@ -171,6 +185,7 @@ h2::after {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,30,0.35) 50%, rgba(0,0,0,0.65) 100%);
+    z-index: 2;
 }
 
 .hero-content {
@@ -572,23 +587,33 @@ footer {
 }
 
 @media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+        display: block;
+        max-width: 100%;
+        word-break: break-word;
+    }
+
     .menu-toggle {
         display: block;
     }
     
     #nav-menu {
         position: fixed;
-        top: -100%;
+        top: 0;
         left: 0;
         width: 100%;
         z-index: 999;
         background: var(--bg-color);
-        padding: 4rem 2rem;
-        transition: var(--transition);
+        padding: 5rem 2rem 2rem;
+        transform: translateY(-100%);
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        visibility: hidden;
     }
 
     #nav-menu.active {
-        top: 0;
+        transform: translateY(0);
+        visibility: visible;
     }
 
     #nav-menu ul {
@@ -596,8 +621,26 @@ footer {
         align-items: center;
     }
 
+    .nav-close {
+        display: flex;
+        position: absolute;
+        top: 1.2rem;
+        right: 1.5rem;
+        background: transparent;
+        border: none;
+        color: var(--primary-color);
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0.25rem;
+    }
+
     .hero-ctas {
         flex-direction: column;
+    }
+
+    .hero-img-bg {
+        min-width: 100%;
+        height: auto;
     }
 
     #countdown {

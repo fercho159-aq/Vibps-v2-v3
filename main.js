@@ -13,7 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Mobile Menu Toggle
     const mobileMenu = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
-    
+    const navClose = document.getElementById('nav-close');
+
+    const closeMenu = () => {
+        navMenu.classList.remove('active');
+        mobileMenu.querySelector('i').classList.add('fa-bars');
+        mobileMenu.querySelector('i').classList.remove('fa-times');
+    };
+
     mobileMenu.addEventListener('click', () => {
         navMenu.classList.toggle('active');
         const icon = mobileMenu.querySelector('i');
@@ -21,13 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.classList.toggle('fa-times');
     });
 
+    navClose.addEventListener('click', closeMenu);
+
     // Close menu when clicking a link
     navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            mobileMenu.querySelector('i').classList.add('fa-bars');
-            mobileMenu.querySelector('i').classList.remove('fa-times');
-        });
+        link.addEventListener('click', closeMenu);
     });
 
     // 3. Reveal on Scroll Animation
