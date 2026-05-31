@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,39 +6,9 @@
     <title>Preguntas Frecuentes | ViBPS Antisocial Club</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .faq-item {
-            background: rgba(255, 255, 255, 0.05);
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid rgba(0, 229, 255, 0.1);
-        }
-        .faq-question {
-            padding: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-        .faq-answer {
-            padding: 0 1.5rem 1.5rem;
-            color: var(--secondary-color);
-            display: none;
-        }
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-        .faq-item.active {
-            border-color: var(--primary-color);
-            box-shadow: var(--neon-glow);
-        }
-    </style>
 </head>
 <body>
 
@@ -46,10 +16,11 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/images/logo-nuevo.png" alt="ViBPS Logo" style="height: 70px; display: inline-block; vertical-align: middle;">
+                    <img src="assets/images/logo-nuevo.png" alt="ViBPS Logo" style="height: 75px; display: inline-block; vertical-align: middle;">
                 </a>
             </div>
             <nav id="nav-menu">
+                <button class="nav-close" id="nav-close" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="preventas.html">Preventas</a></li>
@@ -67,70 +38,131 @@
         </div>
     </header>
 
-    <section class="section-padding" style="margin-top: 80px;">
+    <section class="faq-hero">
+        <div class="container reveal">
+            <span class="tagline">CENTRO DE AYUDA</span>
+            <h1 class="faq-title">
+                <span class="t-line">PREGUNTAS</span>
+                <span class="t-accent">FRECUENTES</span>
+            </h1>
+            <p class="faq-subtitle">Pagos, locaciones, preventas y servicios. Resolvemos en segundos.</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
         <div class="container">
-            <div class="section-header reveal">
-                <span class="tagline">AYUDA</span>
-                <h2>PREGUNTAS FRECUENTES</h2>
-                <p>Todo lo que necesitas saber sobre accesos, pagos y producciÃ³n.</p>
+
+            <!-- Buscador predictivo (V2) -->
+            <div class="faq-search-wrap reveal">
+                <i class="fas fa-search"></i>
+                <input type="search" id="faq-search" placeholder="Busca una respuesta… (ej. pagos, locación, preventa)">
+                <span class="faq-search-count" id="faq-search-count"></span>
             </div>
 
-            <div class="faq-list reveal" style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item active">
-                    <div class="faq-question">
-                        Â¿CÃ³mo compro mis boletos para un evento?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+            <div class="faq-list reveal" id="faq-list">
+
+                <details class="faq-item" data-cat="pagos">
+                    <summary>
+                        <span class="faq-icon">💳</span>
+                        <span class="faq-q">¿Qué métodos de pago aceptan para preventas?</span>
+                        <span class="faq-plus">+</span>
+                    </summary>
                     <div class="faq-answer">
-                        Puedes adquirirlos directamente en nuestra secciÃ³n de "Preventas". Aceptamos tarjetas de crÃ©dito/dÃ©bito y transferencias. Una vez confirmado el pago, recibirÃ¡s un cÃ³digo QR exclusivo en tu correo.
+                        <p>Aceptamos tarjetas Visa, Mastercard y American Express, así como transferencia SPEI directa. Para eventos corporativos manejamos facturación con CFDI 4.0 y pagos a 30 días previo contrato.</p>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Â¿Hacen eventos fuera de la CDMX?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+                </details>
+
+                <details class="faq-item" data-cat="pagos">
+                    <summary>
+                        <span class="faq-icon">💸</span>
+                        <span class="faq-q">¿Puedo solicitar reembolso si no puedo asistir?</span>
+                        <span class="faq-plus">+</span>
+                    </summary>
                     <div class="faq-answer">
-                        SÃ­, tenemos capacidad de movilidad nacional e internacional. ContÃ¡ctanos para discutir los requerimientos logÃ­sticos especÃ­ficos de tu locaciÃ³n.
+                        <p>Los boletos en preventa son no reembolsables, pero sí transferibles. Puedes ceder tu acceso a otra persona enviándonos su nombre completo con 24 horas de anticipación a chesnyrodriguez@gmail.com.</p>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Â¿QuÃ© incluye el servicio de producciÃ³n integral?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+                </details>
+
+                <details class="faq-item" data-cat="locaciones">
+                    <summary>
+                        <span class="faq-icon">📍</span>
+                        <span class="faq-q">¿Dónde se realizan los eventos de ViBPS?</span>
+                        <span class="faq-plus">+</span>
+                    </summary>
                     <div class="faq-answer">
-                        Incluye desde el diseÃ±o creativo y scouting de locaciÃ³n hasta el montaje tÃ©cnico (audio, iluminaciÃ³n, video), catering, seguridad y coordinaciÃ³n de talento.
+                        <p>Operamos en venues curados de CDMX (Roma, Condesa, Polanco, Reforma y locaciones secretas). Para eventos corporativos producimos en cualquier ciudad de México con nuestro equipo móvil completo.</p>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Â¿Existe un cÃ³digo de vestimenta (dress code)?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+                </details>
+
+                <details class="faq-item" data-cat="locaciones">
+                    <summary>
+                        <span class="faq-icon">🔐</span>
+                        <span class="faq-q">¿Cómo me entero del lugar de un evento "secret location"?</span>
+                        <span class="faq-plus">+</span>
+                    </summary>
                     <div class="faq-answer">
-                        Cada evento de ViBPS tiene su propio concepto. Generalmente recomendamos un estilo "Cyber-Chic" o "Smart Casual" oscuro. El cÃ³digo especÃ­fico se indica siempre en tu boleto digital.
+                        <p>Recibirás la ubicación exacta vía WhatsApp 4 horas antes del evento, junto con instrucciones de acceso y código QR personal. Solo los compradores confirmados acceden a esta información.</p>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Â¿Puedo personalizar el show para mi marca?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+                </details>
+
+                <details class="faq-item" data-cat="preventas">
+                    <summary>
+                        <span class="faq-icon">⚡</span>
+                        <span class="faq-q">¿Qué diferencia hay entre Early Bird, Fase 1 y General?</span>
+                        <span class="faq-plus">+</span>
+                    </summary>
                     <div class="faq-answer">
-                        Absolutamente. Somos expertos en "Brand Activation". Podemos integrar tu logotipo en el mapping 3D, crear visuales personalizados y ajustar la paleta de colores del show a tu identidad corporativa.
+                        <p>Early Bird es la primera capa con descuento (limitada a 50 cupos). Fase 1 es la preventa regular con precio intermedio. General se libera 7 días antes del evento al precio puerta. Comprar Early Bird ahorra hasta un 40%.</p>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Â¿CuÃ¡l es su polÃ­tica de cancelaciÃ³n?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+                </details>
+
+                <details class="faq-item" data-cat="preventas">
+                    <summary>
+                        <span class="faq-icon">🎟️</span>
+                        <span class="faq-q">¿Necesito imprimir el boleto?</span>
+                        <span class="faq-plus">+</span>
+                    </summary>
                     <div class="faq-answer">
-                        Para boletos de preventa, no hay reembolsos, pero son transferibles. Para servicios de producciÃ³n, la polÃ­tica varÃ­a segÃºn el contrato, generalmente permitiendo reprogramaciones con 30 dÃ­as de anticipaciÃ³n.
+                        <p>No, basta con tu QR digital en el celular. Lo recibirás por email y por WhatsApp inmediatamente después de la compra. Llevar identificación oficial es obligatorio.</p>
                     </div>
-                </div>
+                </details>
+
+                <details class="faq-item" data-cat="servicios">
+                    <summary>
+                        <span class="faq-icon">🎤</span>
+                        <span class="faq-q">¿Producen eventos para terceros (corporativos o privados)?</span>
+                        <span class="faq-plus">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sí. Diseñamos y producimos eventos llave en mano: lanzamientos de marca, galas, aniversarios, conciertos privados, fiestas temáticas. Cotiza tu evento en la sección de Servicios o por WhatsApp directo al +52 56 4001 3266.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-cat="servicios">
+                    <summary>
+                        <span class="faq-icon">⏱️</span>
+                        <span class="faq-q">¿Con cuánto tiempo de anticipación debo contratar?</span>
+                        <span class="faq-plus">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Mínimo 6 semanas para eventos de hasta 300 personas; 3 meses para producciones mayores. Para galas de fin de año, recomendamos reservar con 6 meses de anticipación. Casos urgentes se evalúan por disponibilidad.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-cat="general">
+                    <summary>
+                        <span class="faq-icon">🔞</span>
+                        <span class="faq-q">¿Hay restricción de edad en los eventos?</span>
+                        <span class="faq-plus">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Todos los eventos públicos de ViBPS son +18, con identificación oficial obligatoria en el acceso. Eventos corporativos y privados se ajustan a las políticas del cliente.</p>
+                    </div>
+                </details>
+
             </div>
+
+            <p class="faq-empty" id="faq-empty" style="display:none;">No encontramos respuestas para esa búsqueda. Escríbenos por WhatsApp.</p>
         </div>
     </section>
 
@@ -143,12 +175,11 @@
                     <p style="font-size: 0.9rem; margin-top: 10px;">Llevando el entretenimiento al siguiente nivel.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>NavegaciÃ³n</h4>
+                    <h4>Contacto</h4>
                     <ul>
-                        <li><a href="preventas.html">Preventas</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Calle los gipaetos 121, Álvaro Obregón, CDMX</li>
+                        <li><i class="fab fa-whatsapp"></i> +52 56 4001 3266</li>
+                        <li><a href="contacto.html">Formulario de contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-map">
@@ -156,20 +187,16 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>DiseÃ±o y ProducciÃ³n: Fernando RodrÃ­guez de la Chesnaye. | Todos los derechos reservados.</p>
+                <p>Diseño y Producción: Fernando Rodríguez de la Chesnaye. | Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
+    <a href="https://wa.me/525640013266?text=Hola,%20tengo%20una%20pregunta%20que%20no%20vi%20en%20FAQ" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-text">¡Chatea con nosotros!</span>
+    </a>
+
     <script src="main.js"></script>
-    <script>
-        // FAQ Accordion Logic
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', () => {
-                const parent = item.parentElement;
-                parent.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html>

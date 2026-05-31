@@ -1,12 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historias de Ã‰xito | ViBPS Antisocial Club</title>
+    <title>Historias de Éxito | ViBPS Antisocial Club</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,10 +16,11 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/images/logo-nuevo.png" alt="ViBPS Logo" style="height: 70px; display: inline-block; vertical-align: middle;">
+                    <img src="assets/images/logo-nuevo.png" alt="ViBPS Logo" style="height: 75px; display: inline-block; vertical-align: middle;">
                 </a>
             </div>
             <nav id="nav-menu">
+                <button class="nav-close" id="nav-close" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="preventas.html">Preventas</a></li>
@@ -37,46 +38,116 @@
         </div>
     </header>
 
-    <section class="section-padding" style="margin-top: 80px;">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="tagline">GALERÃA & BLOG</span>
-                <h2>EVENTOS LEGENDARIOS</h2>
-                <p>Un vistazo a las noches que han definido nuestra trayectoria.</p>
-            </div>
+    <section class="hs-hero">
+        <div class="container reveal">
+            <span class="tagline">PORTAFOLIO · 2014–2024</span>
+            <h1 class="hs-title">
+                <span class="t-line">HISTORIAS QUE</span>
+                <span class="t-accent">DEFINIERON LA NOCHE</span>
+            </h1>
+            <p class="hs-subtitle">Una década de producciones, marcas y noches imposibles de repetir. Explora el archivo visual de ViBPS.</p>
+        </div>
+    </section>
 
-            <div class="grid-2 reveal">
-                <div class="story-card neon-border">
-                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=600" alt="Launch Event">
-                    <div class="story-info" style="padding: 1.5rem;">
-                        <h3>Launch Party: X-Brand</h3>
-                        <p>ProducciÃ³n total para 500 personas en el corazÃ³n de Polanco. Logramos un impacto mediÃ¡tico sin precedentes.</p>
+    <section class="hs-gallery-section">
+        <div class="container">
+            <div class="hs-gallery reveal" id="hs-gallery">
+
+                <figure class="hs-item" data-tilt-deg="-1.2" data-desc="Una noche neón con 3 cabinas internacionales, 480 asistentes y dirección de arte futurista. Terraza Roma · 2023.">
+                    <div class="hs-media">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=700" alt="Neon Night Vol.3">
                     </div>
-                </div>
-                <div class="story-card neon-border">
-                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=600" alt="Private Rave">
-                    <div class="story-info" style="padding: 1.5rem;">
-                        <h3>The Secret Rave</h3>
-                        <p>Un evento underground en una bodega industrial de Vallejo. Sonido de alta fidelidad y seguridad privada.</p>
+                    <figcaption>
+                        <h3>NEON NIGHT VOL. 3</h3>
+                        <span>Terraza Roma · 2023 · 480 asistentes</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="hs-item" data-tilt-deg="0.8" data-desc="Warehouse Condesa transformada en distopía ciberpunk. 720 asistentes, 12 horas de música ininterrumpida.">
+                    <div class="hs-media">
+                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=700" alt="Cyber Rave">
                     </div>
-                </div>
-                <div class="story-card neon-border">
-                    <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=600" alt="Corporate Gala">
-                    <div class="story-info" style="padding: 1.5rem;">
-                        <h3>Gala Anual: Banco Global</h3>
-                        <p>Transformamos un salÃ³n tradicional en un palacio futurista. IluminaciÃ³n robÃ³tica y catering de autor para 1,000 directivos.</p>
+                    <figcaption>
+                        <h3>CYBER RAVE CDMX</h3>
+                        <span>Warehouse Condesa · 2024 · 720 asistentes</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="hs-item" data-tilt-deg="-0.6" data-desc="Sesión techno en venue secreto. Acceso solo por invitación. 180 asistentes seleccionados, 8 horas de selección musical impecable.">
+                    <div class="hs-media">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=700" alt="Underground Session">
                     </div>
-                </div>
-                <div class="story-card neon-border">
-                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=600" alt="CDMX Festival">
-                    <div class="story-info" style="padding: 1.5rem;">
-                        <h3>Festival Electra CDMX</h3>
-                        <p>Co-producciÃ³n del escenario principal. Un despliegue tÃ©cnico de mapping 3D y pirotecnia sincronizada nunca antes visto.</p>
+                    <figcaption>
+                        <h3>UNDERGROUND SESSION</h3>
+                        <span>Secret Location · 2023 · 180 asistentes</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="hs-item" data-tilt-deg="1.5" data-desc="Fiesta inmersiva en Xochimilco con escenografía Neon Jungle. Trajineras como cabinas, 320 asistentes bajo luna llena.">
+                    <div class="hs-media">
+                        <img src="https://images.unsplash.com/photo-1514525253361-bee8a197c0c5?auto=format&fit=crop&q=80&w=700" alt="Full Moon Party">
                     </div>
-                </div>
+                    <figcaption>
+                        <h3>FULL MOON PARTY</h3>
+                        <span>Xochimilco · 2023 · 320 asistentes</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="hs-item" data-tilt-deg="-1.8" data-desc="House set al atardecer sobre Reforma Skyline. 280 asistentes, vista de 360°, formato exclusivo.">
+                    <div class="hs-media">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=700" alt="Rooftop Session">
+                    </div>
+                    <figcaption>
+                        <h3>ROOFTOP SESSION</h3>
+                        <span>Reforma Skyline · 2022 · 280 asistentes</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="hs-item" data-tilt-deg="0.4" data-desc="Gala invernal en Palacio Metropolitano. Producción con orquesta y mapping arquitectónico para 600 invitados.">
+                    <div class="hs-media">
+                        <img src="https://images.unsplash.com/photo-1571266028243-e4bb3339439a?auto=format&fit=crop&q=80&w=700" alt="Winter Gala">
+                    </div>
+                    <figcaption>
+                        <h3>WINTER GALA 2023</h3>
+                        <span>Palacio Metropolitano · 2023 · 600 asistentes</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="hs-item" data-tilt-deg="-0.9" data-desc="Activación lounge premium para marca de cognac. Curaduría sonora íntima, 150 invitados VIP.">
+                    <div class="hs-media">
+                        <img src="https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?auto=format&fit=crop&q=80&w=700" alt="Lounge Premium">
+                    </div>
+                    <figcaption>
+                        <h3>LOUNGE PREMIUM</h3>
+                        <span>Polanco · 2024 · 150 asistentes</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="hs-item" data-tilt-deg="1.1" data-desc="Lanzamiento de producto tech internacional. 1,200 asistentes, escenografía interactiva, 4 cámaras live.">
+                    <div class="hs-media">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=700" alt="Brand Launch">
+                    </div>
+                    <figcaption>
+                        <h3>BRAND LAUNCH TECH</h3>
+                        <span>Polanco · 2024 · 1,200 asistentes</span>
+                    </figcaption>
+                </figure>
+
             </div>
         </div>
     </section>
+
+    <!-- LIGHTBOX -->
+    <div class="hs-lightbox" id="hs-lightbox" aria-hidden="true">
+        <button class="hs-lb-close" id="hs-lb-close" aria-label="Cerrar">&times;</button>
+        <figure class="hs-lb-content">
+            <img id="hs-lb-img" src="" alt="">
+            <figcaption>
+                <h3 id="hs-lb-title"></h3>
+                <p id="hs-lb-desc"></p>
+            </figcaption>
+        </figure>
+    </div>
 
     <footer>
         <div class="container">
@@ -87,12 +158,11 @@
                     <p style="font-size: 0.9rem; margin-top: 10px;">Llevando el entretenimiento al siguiente nivel.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>NavegaciÃ³n</h4>
+                    <h4>Contacto</h4>
                     <ul>
-                        <li><a href="preventas.html">Preventas</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Calle los gipaetos 121, Álvaro Obregón, CDMX</li>
+                        <li><i class="fab fa-whatsapp"></i> +52 56 4001 3266</li>
+                        <li><a href="contacto.html">Formulario de contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-map">
@@ -100,13 +170,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>DiseÃ±o y ProducciÃ³n: Fernando RodrÃ­guez de la Chesnaye. | Todos los derechos reservados.</p>
+                <p>Diseño y Producción: Fernando Rodríguez de la Chesnaye. | Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/525640013266?text=Hola,%20vi%20sus%20historias%20de%20Ã©xito%20y%20me%20interesa%20algo%20similar" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/525640013266?text=Hola,%20quiero%20saber%20más%20de%20ViBPS" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
+        <span class="wa-text">¡Chatea con nosotros!</span>
     </a>
 
     <script src="main.js"></script>

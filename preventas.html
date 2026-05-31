@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Preventas | ViBPS Antisocial Club</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,10 +16,11 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/images/logo-nuevo.png" alt="ViBPS Logo" style="height: 70px; display: inline-block; vertical-align: middle;">
+                    <img src="assets/images/logo-nuevo.png" alt="ViBPS Logo" style="height: 75px; display: inline-block; vertical-align: middle;">
                 </a>
             </div>
             <nav id="nav-menu">
+                <button class="nav-close" id="nav-close" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="preventas.html" class="active">Preventas</a></li>
@@ -37,111 +38,182 @@
         </div>
     </header>
 
-    <section class="section-padding" style="margin-top: 80px;">
+    <!-- HERO INTRO -->
+    <section class="pv-hero">
+        <div class="container reveal">
+            <span class="tagline">PRÓXIMOS EVENTOS</span>
+            <h1 class="pv-title">
+                <span class="t-line">ASEGURA TU</span>
+                <span class="t-accent">ENTRADA</span>
+            </h1>
+            <p class="pv-subtitle">Acceso exclusivo a las producciones más esperadas de Ciudad de México. Reserva antes que nadie y vive la noche en su mejor versión.</p>
+        </div>
+    </section>
+
+    <!-- FILTRO + BUSCADOR -->
+    <section class="pv-filter-section">
         <div class="container">
-            <div class="section-header reveal">
-                <span class="tagline">PRÃ“XIMOS EVENTOS</span>
-                <h2>ASEGURA TU ENTRADA</h2>
-                <p>Acceso exclusivo a las mejores producciones de CDMX.</p>
+            <div class="pv-filter reveal">
+                <div class="pv-search">
+                    <i class="fas fa-search"></i>
+                    <input type="search" id="pv-search-input" placeholder="Buscar evento, venue o fecha...">
+                </div>
+                <div class="pv-pills" id="pv-filter-pills">
+                    <button class="pv-pill active" data-filter="all">Todos</button>
+                    <button class="pv-pill" data-filter="early">Early Bird</button>
+                    <button class="pv-pill" data-filter="fase1">Fase 1</button>
+                    <button class="pv-pill" data-filter="last">Últimos cupos</button>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="grid-3 reveal">
-                <!-- Event Card 1 -->
-                <div class="event-card neon-border">
-                    <div class="event-img">
-                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=500" alt="Neon Night">
-                        <span class="event-date">15 JUN</span>
+    <!-- GRID DE EVENTOS -->
+    <section class="pv-grid-section">
+        <div class="container">
+            <div class="pv-grid" id="pv-grid">
+
+                <article class="pv-card" data-status="early" data-name="NEON NIGHT VOL. 4">
+                    <div class="pv-img">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=600" alt="Neon Night">
+                        <span class="pv-date">
+                            <span class="pv-day">15</span>
+                            <span class="pv-month">JUN</span>
+                        </span>
+                        <span class="pv-badge badge-early">Early Bird</span>
                     </div>
-                    <div class="event-info">
+                    <div class="pv-body">
                         <h3>NEON NIGHT VOL. 4</h3>
-                        <p>Terraza Roma Norte | DJ Set Live</p>
-                        <div class="price-box">
-                            <span class="price">$450 MXN</span>
+                        <p class="pv-venue">Terraza Roma Norte · DJ Set Live</p>
+                        <div class="pv-meta">
+                            <span class="pv-price">$450 MXN</span>
+                            <span class="pv-availability">142 / 200</span>
                         </div>
-                        <a href="#" class="btn btn-primary full-width">Comprar Tickets</a>
+                        <a href="#" class="btn btn-primary pv-cta">
+                            <span class="cta-v1">Solicitar Acceso</span>
+                            <span class="cta-v2">¡COMPRAR PREVENTA!</span>
+                        </a>
                     </div>
-                </div>
+                </article>
 
-                <!-- Event Card 2 -->
-                <div class="event-card neon-border">
-                    <div class="event-img">
-                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=500" alt="Cyber Rave">
-                        <span class="event-date">02 JUL</span>
+                <article class="pv-card" data-status="fase1" data-name="CYBER RAVE CDMX">
+                    <div class="pv-img">
+                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=600" alt="Cyber Rave">
+                        <span class="pv-date">
+                            <span class="pv-day">02</span>
+                            <span class="pv-month">JUL</span>
+                        </span>
+                        <span class="pv-badge badge-fase1">Fase 1</span>
                     </div>
-                    <div class="event-info">
+                    <div class="pv-body">
                         <h3>CYBER RAVE CDMX</h3>
-                        <p>Warehouse Condesa | Performance Art</p>
-                        <div class="price-box">
-                            <span class="price">$600 MXN</span>
+                        <p class="pv-venue">Warehouse Condesa · Performance Art</p>
+                        <div class="pv-meta">
+                            <span class="pv-price">$600 MXN</span>
+                            <span class="pv-availability">87 / 350</span>
                         </div>
-                        <a href="#" class="btn btn-primary full-width">Comprar Tickets</a>
+                        <a href="#" class="btn btn-primary pv-cta">
+                            <span class="cta-v1">Solicitar Acceso</span>
+                            <span class="cta-v2">¡COMPRAR PREVENTA!</span>
+                        </a>
                     </div>
-                </div>
+                </article>
 
-                <!-- Event Card 3 -->
-                <div class="event-card neon-border">
-                    <div class="event-img">
-                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=500" alt="Underground Session">
-                        <span class="event-date">20 AGO</span>
+                <article class="pv-card" data-status="last" data-name="UNDERGROUND SESSION">
+                    <div class="pv-img">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=600" alt="Underground Session">
+                        <span class="pv-date">
+                            <span class="pv-day">20</span>
+                            <span class="pv-month">AGO</span>
+                        </span>
+                        <span class="pv-badge badge-last">¡ÚLTIMOS CUPOS!</span>
                     </div>
-                    <div class="event-info">
+                    <div class="pv-body">
                         <h3>UNDERGROUND SESSION</h3>
-                        <p>Secret Location | Techno Experience</p>
-                        <div class="price-box">
-                            <span class="price">$350 MXN</span>
+                        <p class="pv-venue">Secret Location · Techno Experience</p>
+                        <div class="pv-meta">
+                            <span class="pv-price">$350 MXN</span>
+                            <span class="pv-availability">14 / 150</span>
                         </div>
-                        <a href="#" class="btn btn-primary full-width">Comprar Tickets</a>
+                        <a href="#" class="btn btn-primary pv-cta">
+                            <span class="cta-v1">Solicitar Acceso</span>
+                            <span class="cta-v2">¡COMPRAR PREVENTA!</span>
+                        </a>
                     </div>
-                </div>
+                </article>
 
-                <!-- Event Card 4 -->
-                <div class="event-card neon-border">
-                    <div class="event-img">
-                        <img src="https://images.unsplash.com/photo-1514525253361-bee8a197c0c5?auto=format&fit=crop&q=80&w=500" alt="Full Moon Party">
-                        <span class="event-date">12 SEP</span>
+                <article class="pv-card" data-status="early" data-name="FULL MOON PARTY">
+                    <div class="pv-img">
+                        <img src="https://images.unsplash.com/photo-1514525253361-bee8a197c0c5?auto=format&fit=crop&q=80&w=600" alt="Full Moon Party">
+                        <span class="pv-date">
+                            <span class="pv-day">12</span>
+                            <span class="pv-month">SEP</span>
+                        </span>
+                        <span class="pv-badge badge-early">Early Bird</span>
                     </div>
-                    <div class="event-info">
+                    <div class="pv-body">
                         <h3>FULL MOON PARTY</h3>
-                        <p>Xochimilco Exclusive | Neon Jungle</p>
-                        <div class="price-box">
-                            <span class="price">$550 MXN</span>
+                        <p class="pv-venue">Xochimilco Exclusive · Neon Jungle</p>
+                        <div class="pv-meta">
+                            <span class="pv-price">$550 MXN</span>
+                            <span class="pv-availability">198 / 300</span>
                         </div>
-                        <a href="#" class="btn btn-primary full-width">Comprar Tickets</a>
+                        <a href="#" class="btn btn-primary pv-cta">
+                            <span class="cta-v1">Solicitar Acceso</span>
+                            <span class="cta-v2">¡COMPRAR PREVENTA!</span>
+                        </a>
                     </div>
-                </div>
+                </article>
 
-                <!-- Event Card 5 -->
-                <div class="event-card neon-border">
-                    <div class="event-img">
-                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=500" alt="Rooftop Session">
-                        <span class="event-date">05 OCT</span>
+                <article class="pv-card" data-status="fase1" data-name="ROOFTOP SESSION">
+                    <div class="pv-img">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=600" alt="Rooftop Session">
+                        <span class="pv-date">
+                            <span class="pv-day">05</span>
+                            <span class="pv-month">OCT</span>
+                        </span>
+                        <span class="pv-badge badge-fase1">Fase 1</span>
                     </div>
-                    <div class="event-info">
+                    <div class="pv-body">
                         <h3>ROOFTOP SESSION</h3>
-                        <p>Reforma Skyline | Sunset House</p>
-                        <div class="price-box">
-                            <span class="price">$400 MXN</span>
+                        <p class="pv-venue">Reforma Skyline · Sunset House</p>
+                        <div class="pv-meta">
+                            <span class="pv-price">$400 MXN</span>
+                            <span class="pv-availability">110 / 250</span>
                         </div>
-                        <a href="#" class="btn btn-primary full-width">Comprar Tickets</a>
+                        <a href="#" class="btn btn-primary pv-cta">
+                            <span class="cta-v1">Solicitar Acceso</span>
+                            <span class="cta-v2">¡COMPRAR PREVENTA!</span>
+                        </a>
                     </div>
-                </div>
+                </article>
 
-                <!-- Event Card 6 -->
-                <div class="event-card neon-border">
-                    <div class="event-img">
-                        <img src="https://images.unsplash.com/photo-1571266028243-e4bb3339439a?auto=format&fit=crop&q=80&w=500" alt="Winter Gala">
-                        <span class="event-date">15 DIC</span>
+                <article class="pv-card" data-status="last" data-name="WINTER GALA 2024">
+                    <div class="pv-img">
+                        <img src="https://images.unsplash.com/photo-1571266028243-e4bb3339439a?auto=format&fit=crop&q=80&w=600" alt="Winter Gala">
+                        <span class="pv-date">
+                            <span class="pv-day">15</span>
+                            <span class="pv-month">DIC</span>
+                        </span>
+                        <span class="pv-badge badge-last">¡ÚLTIMOS CUPOS!</span>
                     </div>
-                    <div class="event-info">
+                    <div class="pv-body">
                         <h3>WINTER GALA 2024</h3>
-                        <p>Palacio Metropolitano | Elegant Rave</p>
-                        <div class="price-box">
-                            <span class="price">$1,200 MXN</span>
+                        <p class="pv-venue">Palacio Metropolitano · Elegant Rave</p>
+                        <div class="pv-meta">
+                            <span class="pv-price">$1,200 MXN</span>
+                            <span class="pv-availability">22 / 400</span>
                         </div>
-                        <a href="#" class="btn btn-primary full-width">Comprar Tickets</a>
+                        <a href="#" class="btn btn-primary pv-cta">
+                            <span class="cta-v1">Solicitar Acceso</span>
+                            <span class="cta-v2">¡COMPRAR PREVENTA!</span>
+                        </a>
                     </div>
-                </div>
+                </article>
+
             </div>
+
+            <p class="pv-empty" id="pv-empty" style="display:none;">No encontramos eventos con esos filtros.</p>
         </div>
     </section>
 
@@ -154,7 +226,7 @@
                     <p style="font-size: 0.9rem; margin-top: 10px;">Llevando el entretenimiento al siguiente nivel.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>NavegaciÃ³n</h4>
+                    <h4>Navegación</h4>
                     <ul>
                         <li><a href="preventas.html">Preventas</a></li>
                         <li><a href="servicios.html">Servicios</a></li>
@@ -167,13 +239,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>DiseÃ±o y ProducciÃ³n: Fernando RodrÃ­guez de la Chesnaye. | Todos los derechos reservados.</p>
+                <p>Diseño y Producción: Fernando Rodríguez de la Chesnaye. | Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/525640013266?text=Hola,%20quiero%20informaciÃ³n%20sobre%20las%20preventas" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/525640013266?text=Hola,%20quiero%20información%20sobre%20las%20preventas" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
+        <span class="wa-text">¡Chatea con nosotros!</span>
     </a>
 
     <script src="main.js"></script>

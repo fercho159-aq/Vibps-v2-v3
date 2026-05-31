@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Nosotros | ViBPS Antisocial Club</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,10 +16,11 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/images/logo-nuevo.png" alt="ViBPS Logo" style="height: 70px; display: inline-block; vertical-align: middle;">
+                    <img src="assets/images/logo-nuevo.png" alt="ViBPS Logo" style="height: 75px; display: inline-block; vertical-align: middle;">
                 </a>
             </div>
             <nav id="nav-menu">
+                <button class="nav-close" id="nav-close" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="preventas.html">Preventas</a></li>
@@ -37,22 +38,108 @@
         </div>
     </header>
 
-    <section class="section-padding" style="margin-top: 80px;">
+    <!-- V1: BIO EDITORIAL — magazine layout -->
+    <section class="ns-bio">
+        <div class="ns-bio-wrap">
+            <header class="ns-bio-header reveal">
+                <span class="tagline">PERFIL · 2024</span>
+                <h1 class="ns-bio-title">Fernando Rodríguez<br><em>de la Chesnaye</em></h1>
+                <p class="ns-bio-kicker">Director creativo de ViBPS Antisocial Club. Más de una década diseñando la vida nocturna que la Ciudad de México recordará.</p>
+            </header>
+
+            <figure class="ns-portrait reveal">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=900" alt="Fernando Rodríguez de la Chesnaye">
+                <figcaption>Ciudad de México · Fotografía editorial</figcaption>
+            </figure>
+
+            <article class="ns-prose">
+                <p class="ns-drop reveal"><span class="ns-cap">F</span>ernando creció escuchando vinilos en el sótano de la casa familiar en Álvaro Obregón. Desde adolescente entendió que una buena fiesta no es ruido: es arquitectura emocional. Esa intuición lo llevó, primero, a producir eventos privados para amigos; después, a dirigir algunas de las marcas de entretenimiento más codiciadas de Ciudad de México.</p>
+
+                <p class="reveal">En 2014 fundó ViBPS Antisocial Club bajo una premisa simple y obsesiva: <em>cada noche debe sentirse irrepetible</em>. La agencia se ha convertido en sinónimo de producción quirúrgica, dirección de arte radical y atención al último detalle.</p>
+
+                <p class="reveal">Su filosofía bebe del cine, la moda y la cultura de club europea. <em>"No vendemos boletos, vendemos memoria"</em>, repite. Bajo su dirección, ViBPS opera con un equipo curado de productores, ingenieros de sonido, diseñadores lumínicos y artistas visuales que comparten una misma obsesión: la perfección invisible.</p>
+
+                <p class="reveal">Hoy, ViBPS es referente nacional de eventos premium y empieza a expandirse a otras ciudades del país. La promesa permanece intacta desde aquel sótano: <strong>llevar la energía al siguiente nivel</strong>.</p>
+            </article>
+
+            <aside class="ns-pullquote reveal">
+                <blockquote>
+                    "No vendemos boletos, vendemos memoria. Cada evento es una pieza única, irrepetible, que el público se lleva tatuada."
+                </blockquote>
+                <cite>— Fernando R. de la Chesnaye</cite>
+            </aside>
+        </div>
+    </section>
+
+    <!-- V2: TIMELINE INTERACTIVA -->
+    <section class="ns-timeline-section">
         <div class="container">
-            <div class="grid-2 reveal">
-                <div class="nosotros-img neon-border">
-                    <!-- High quality professional photo of Fernando could go here -->
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600" alt="Fernando RodrÃ­guez de la Chesnaye">
+            <div class="section-header reveal">
+                <span class="tagline">NUESTRA TRAYECTORIA</span>
+                <h2>UNA DÉCADA DEFINIENDO LA NOCHE</h2>
+            </div>
+
+            <div class="ns-timeline" id="ns-timeline">
+                <div class="ns-cable"></div>
+
+                <div class="ns-milestone" data-side="left">
+                    <div class="ns-dot"><i class="fas fa-record-vinyl"></i></div>
+                    <div class="ns-card">
+                        <span class="ns-year">2014</span>
+                        <h3>Nace ViBPS</h3>
+                        <p>Fernando funda el club en una bodega rentada de la Roma. Primer evento: 80 personas, dos cabinas, una visión clara.</p>
+                    </div>
                 </div>
-                <div class="nosotros-info">
-                    <span class="tagline">NUESTRA VISIÃ“N</span>
-                    <h2>FERNANDO RODRÃGUEZ DE LA CHESNAYE</h2>
-                    <p class="highlight">"ViBPS no es solo una agencia, es una filosofÃ­a de vida nocturna."</p>
-                    <p>Con aÃ±os de experiencia en la escena de entretenimiento de la Ciudad de MÃ©xico, Fernando ha liderado proyectos que desafÃ­an lo convencional. Su visiÃ³n combina la precisiÃ³n tÃ©cnica con una pasiÃ³n inquebrantable por crear momentos que se queden grabados en la memoria colectiva.</p>
-                    <p>Bajo su direcciÃ³n creativa, ViBPS Antisocial Club se ha convertido en el aliado estratÃ©gico de marcas y particulares que buscan exclusividad, energÃ­a y una ejecuciÃ³n impecable.</p>
+
+                <div class="ns-milestone" data-side="right">
+                    <div class="ns-dot"><i class="fas fa-bolt"></i></div>
+                    <div class="ns-card">
+                        <span class="ns-year">2016</span>
+                        <h3>Primera marca corporativa</h3>
+                        <p>Producción para el lanzamiento de una marca tech internacional. 1,200 asistentes y la primera mención en prensa especializada.</p>
+                    </div>
+                </div>
+
+                <div class="ns-milestone" data-side="left">
+                    <div class="ns-dot"><i class="fas fa-music"></i></div>
+                    <div class="ns-card">
+                        <span class="ns-year">2018</span>
+                        <h3>Línea internacional de DJs</h3>
+                        <p>Empieza la curaduría regular con talento europeo. Nace la serie <em>Underground Sessions</em> en venues secretos.</p>
+                    </div>
+                </div>
+
+                <div class="ns-milestone" data-side="right">
+                    <div class="ns-dot"><i class="fas fa-lightbulb"></i></div>
+                    <div class="ns-card">
+                        <span class="ns-year">2020</span>
+                        <h3>Pivote digital</h3>
+                        <p>Streaming, drive-in concerts y experiencias híbridas durante la pandemia. ViBPS no se detiene.</p>
+                    </div>
+                </div>
+
+                <div class="ns-milestone" data-side="left">
+                    <div class="ns-dot"><i class="fas fa-award"></i></div>
+                    <div class="ns-card">
+                        <span class="ns-year">2022</span>
+                        <h3>Producción para marcas top</h3>
+                        <p>Corona, Jose Cuervo, Spotify y Netflix MX confían eventos clave a la agencia. +200 producciones al año.</p>
+                    </div>
+                </div>
+
+                <div class="ns-milestone" data-side="right">
+                    <div class="ns-dot"><i class="fas fa-rocket"></i></div>
+                    <div class="ns-card">
+                        <span class="ns-year">2024</span>
+                        <h3>Expansión nacional</h3>
+                        <p>Operaciones simultáneas en CDMX, Monterrey y Guadalajara. 500+ eventos producidos. La nueva era de los eventos comienza.</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="ns-parallax" data-speed="0.3"></div>
+        <div class="ns-parallax ns-parallax-2" data-speed="0.55"></div>
     </section>
 
     <footer>
@@ -64,12 +151,11 @@
                     <p style="font-size: 0.9rem; margin-top: 10px;">Llevando el entretenimiento al siguiente nivel.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>NavegaciÃ³n</h4>
+                    <h4>Contacto</h4>
                     <ul>
-                        <li><a href="preventas.html">Preventas</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Calle los gipaetos 121, Álvaro Obregón, CDMX</li>
+                        <li><i class="fab fa-whatsapp"></i> +52 56 4001 3266</li>
+                        <li><a href="contacto.html">Formulario de contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-map">
@@ -77,10 +163,15 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>DiseÃ±o y ProducciÃ³n: Fernando RodrÃ­guez de la Chesnaye. | Todos los derechos reservados.</p>
+                <p>Diseño y Producción: Fernando Rodríguez de la Chesnaye. | Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/525640013266?text=Hola,%20quiero%20saber%20más%20de%20ViBPS" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-text">¡Chatea con nosotros!</span>
+    </a>
 
     <script src="main.js"></script>
 </body>

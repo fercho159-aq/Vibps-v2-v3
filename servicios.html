@@ -1,12 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios de ProducciÃ³n | ViBPS Antisocial Club</title>
+    <title>Servicios de Producción | ViBPS Antisocial Club</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,10 +16,11 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/images/logo-nuevo.png" alt="ViBPS Logo" style="height: 70px; display: inline-block; vertical-align: middle;">
+                    <img src="assets/images/logo-nuevo.png" alt="ViBPS Logo" style="height: 75px; display: inline-block; vertical-align: middle;">
                 </a>
             </div>
             <nav id="nav-menu">
+                <button class="nav-close" id="nav-close" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="preventas.html">Preventas</a></li>
@@ -37,44 +38,200 @@
         </div>
     </header>
 
-    <section class="section-padding" style="margin-top: 80px;">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="tagline">NUESTROS SERVICIOS</span>
-                <h2>PRODUCCIÃ“N INTEGRAL</h2>
-                <p>Convertimos cualquier espacio en una experiencia sensorial Ãºnica.</p>
-            </div>
+    <!-- INTRO -->
+    <section class="sv-hero">
+        <div class="container reveal">
+            <span class="tagline">PRODUCCIÓN INTEGRAL</span>
+            <h1 class="sv-title">
+                <span class="t-line">DISEÑAMOS LA NOCHE,</span>
+                <span class="t-accent">EJECUTAMOS LA LEYENDA</span>
+            </h1>
+            <p class="sv-subtitle">De la idea a la última luz apagada: cada detalle dirigido por Fernando Rodríguez de la Chesnaye y un equipo obsesionado con la perfección.</p>
+        </div>
+    </section>
 
-            <div class="grid-2 reveal">
-                <div class="service-item neon-card">
-                    <i class="fas fa-building"></i>
-                    <h3>Eventos Corporativos</h3>
-                    <p>Lanzamientos de marca, aniversarios y fiestas de fin de aÃ±o que rompen el molde tradicional. Elevamos la imagen de tu empresa a travÃ©s del entretenimiento de alto nivel.</p>
-                </div>
-                <div class="service-item neon-card">
-                    <i class="fas fa-glass-cheers"></i>
-                    <h3>Eventos Privados</h3>
-                    <p>Fiestas exclusivas, cumpleaÃ±os y celebraciones sociales donde la privacidad y la energÃ­a son la prioridad. GestiÃ³n total de catering, seguridad y ambientaciÃ³n.</p>
-                </div>
-                <div class="service-item neon-card">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>DiseÃ±o de IluminaciÃ³n & Audio</h3>
-                    <p>IngenierÃ­a de vanguardia para crear atmÃ³sferas envolventes. Utilizamos tecnologÃ­a robÃ³tica y sistemas de sonido line-array para una fidelidad absoluta.</p>
-                </div>
-                <div class="service-item neon-card">
-                    <i class="fas fa-tasks"></i>
-                    <h3>LogÃ­stica & OperaciÃ³n</h3>
-                    <p>Nos encargamos de todo el "backstage": permisos, montaje, coordinaciÃ³n de proveedores y ejecuciÃ³n tÃ©cnica el dÃ­a del evento.</p>
-                </div>
+    <!-- TABS DE SERVICIOS -->
+    <section class="sv-tabs-section">
+        <div class="container">
+            <nav class="sv-tabs reveal" id="sv-tabs">
+                <button class="sv-tab active" data-tab="fiestas" data-accent="#00E5FF">
+                    <i class="fas fa-glass-cheers"></i><span>Fiestas & Entretenimiento</span>
+                </button>
+                <button class="sv-tab" data-tab="corporativo" data-accent="#FF6B35">
+                    <i class="fas fa-building"></i><span>Eventos Corporativos</span>
+                </button>
+                <button class="sv-tab" data-tab="audio" data-accent="#B2F7FF">
+                    <i class="fas fa-volume-up"></i><span>Audio & Iluminación</span>
+                </button>
+                <button class="sv-tab" data-tab="logistica" data-accent="#FF00DE">
+                    <i class="fas fa-tasks"></i><span>Logística & Operación</span>
+                </button>
+            </nav>
+
+            <div class="sv-panels">
+                <article class="sv-panel active" data-tab="fiestas">
+                    <div class="sv-panel-img">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=900" alt="Fiestas">
+                    </div>
+                    <div class="sv-panel-text">
+                        <h2>Fiestas que rompen el guion</h2>
+                        <p class="sv-lead">Diseñamos noches con identidad. Cada fiesta es un universo cerrado donde la música, la luz y la dirección de arte conversan.</p>
+                        <ul class="sv-list">
+                            <li><i class="fas fa-bolt"></i> Curaduría de DJs nacionales e internacionales</li>
+                            <li><i class="fas fa-eye"></i> Dirección visual y escenografía a medida</li>
+                            <li><i class="fas fa-users"></i> Producción de fiestas privadas y públicas</li>
+                            <li><i class="fas fa-music"></i> Performances y arte en vivo curado</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="sv-panel" data-tab="corporativo">
+                    <div class="sv-panel-img">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=900" alt="Corporativo">
+                    </div>
+                    <div class="sv-panel-text">
+                        <h2>El nuevo evento corporativo</h2>
+                        <p class="sv-lead">Lanzamientos de marca, aniversarios y galas de fin de año que rompen el molde tradicional. Tu empresa, contada con la energía que merece.</p>
+                        <ul class="sv-list">
+                            <li><i class="fas fa-rocket"></i> Lanzamientos y activaciones de marca</li>
+                            <li><i class="fas fa-handshake"></i> Galas y cenas ejecutivas</li>
+                            <li><i class="fas fa-award"></i> Premiaciones y eventos institucionales</li>
+                            <li><i class="fas fa-chart-line"></i> Convenciones y experiencias inmersivas</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="sv-panel" data-tab="audio">
+                    <div class="sv-panel-img">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=900" alt="Audio Luces">
+                    </div>
+                    <div class="sv-panel-text">
+                        <h2>Ingeniería sensorial</h2>
+                        <p class="sv-lead">Sistemas line-array, iluminación robótica y mapping. Tecnología de nivel festival internacional puesta al servicio de tu noche.</p>
+                        <ul class="sv-list">
+                            <li><i class="fas fa-lightbulb"></i> Diseño de iluminación arquitectónica</li>
+                            <li><i class="fas fa-volume-up"></i> Sistemas de audio line-array premium</li>
+                            <li><i class="fas fa-video"></i> Mapping, video y contenido en vivo</li>
+                            <li><i class="fas fa-microchip"></i> Sincronización lumínica con DMX</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="sv-panel" data-tab="logistica">
+                    <div class="sv-panel-img">
+                        <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=900" alt="Logística">
+                    </div>
+                    <div class="sv-panel-text">
+                        <h2>Operación invisible, ejecución impecable</h2>
+                        <p class="sv-lead">Permisos, montaje, seguridad y proveedores. Nos encargamos del backstage para que solo te ocupes de disfrutar la noche.</p>
+                        <ul class="sv-list">
+                            <li><i class="fas fa-file-signature"></i> Permisos, seguros y gestión legal</li>
+                            <li><i class="fas fa-truck"></i> Logística, montaje y desmontaje</li>
+                            <li><i class="fas fa-user-shield"></i> Seguridad privada y control de accesos</li>
+                            <li><i class="fas fa-utensils"></i> Catering, bar y proveedores curados</li>
+                        </ul>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <section class="section-padding bg-dark-accent reveal">
-        <div class="container text-center">
-            <h2>Â¿TIENES UNA IDEA LOCA?</h2>
-            <p style="margin: 2rem 0; font-size: 1.2rem;">Nos especializamos en lo imposible. Si puedes soÃ±arlo, ViBPS puede producirlo.</p>
-            <a href="contacto.html" class="btn btn-primary">Hablemos de tu proyecto</a>
+    <!-- FORMULARIO DE COTIZACIÓN -->
+    <section class="sv-quote-section bg-dark-accent">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="tagline">COTIZACIÓN RÁPIDA</span>
+                <h2 class="sv-quote-title">
+                    <span class="qv-v1">CONSULTA PRIVADA</span>
+                    <span class="qv-v2">CONFIGURA TU EVENTO</span>
+                </h2>
+            </div>
+
+            <!-- V1: Form minimalista -->
+            <form class="quote-elegant reveal" id="quote-elegant">
+                <div class="qe-row">
+                    <div class="qe-field"><input type="text" placeholder="Nombre completo" required></div>
+                    <div class="qe-field"><input type="email" placeholder="Correo" required></div>
+                </div>
+                <div class="qe-row">
+                    <div class="qe-field"><input type="text" placeholder="Tipo de evento"></div>
+                    <div class="qe-field"><input type="text" placeholder="Fecha aproximada"></div>
+                </div>
+                <div class="qe-field"><textarea rows="3" placeholder="Cuéntanos brevemente tu visión..."></textarea></div>
+                <button type="submit" class="btn btn-primary">SOLICITAR CONSULTA PRIVADA</button>
+            </form>
+
+            <!-- V2: Wizard interactivo -->
+            <form class="quote-wizard reveal" id="quote-wizard">
+                <div class="wiz-progress">
+                    <div class="wiz-step active" data-step="1"><span>01</span><small>Tipo</small></div>
+                    <div class="wiz-line"></div>
+                    <div class="wiz-step" data-step="2"><span>02</span><small>Detalles</small></div>
+                    <div class="wiz-line"></div>
+                    <div class="wiz-step" data-step="3"><span>03</span><small>Contacto</small></div>
+                    <div class="wiz-line"></div>
+                    <div class="wiz-step" data-step="4"><span>04</span><small>Listo</small></div>
+                </div>
+
+                <div class="wiz-panels">
+                    <div class="wiz-panel active" data-step="1">
+                        <h3>¿Qué tipo de evento producimos?</h3>
+                        <div class="wiz-options">
+                            <label class="wiz-opt"><input type="radio" name="tipo" value="fiesta"><span><i class="fas fa-glass-cheers"></i>Fiesta privada</span></label>
+                            <label class="wiz-opt"><input type="radio" name="tipo" value="corporativo"><span><i class="fas fa-building"></i>Corporativo</span></label>
+                            <label class="wiz-opt"><input type="radio" name="tipo" value="concierto"><span><i class="fas fa-music"></i>Concierto/DJ</span></label>
+                            <label class="wiz-opt"><input type="radio" name="tipo" value="otro"><span><i class="fas fa-star"></i>Otro</span></label>
+                        </div>
+                    </div>
+
+                    <div class="wiz-panel" data-step="2">
+                        <h3>Detalles del evento</h3>
+                        <div class="wiz-grid">
+                            <div class="wiz-field"><label>Asistentes estimados</label><input type="number" placeholder="ej. 200"></div>
+                            <div class="wiz-field"><label>Fecha aproximada</label><input type="date"></div>
+                            <div class="wiz-field"><label>Presupuesto aproximado</label>
+                                <select>
+                                    <option value="">Selecciona…</option>
+                                    <option>$50k - $150k MXN</option>
+                                    <option>$150k - $400k MXN</option>
+                                    <option>$400k - $1M MXN</option>
+                                    <option>+$1M MXN</option>
+                                </select>
+                            </div>
+                            <div class="wiz-field"><label>Ciudad</label><input type="text" placeholder="CDMX, Monterrey, etc."></div>
+                        </div>
+                    </div>
+
+                    <div class="wiz-panel" data-step="3">
+                        <h3>¿Cómo te contactamos?</h3>
+                        <div class="wiz-grid">
+                            <div class="wiz-field"><label>Nombre</label><input type="text" placeholder="Tu nombre"></div>
+                            <div class="wiz-field"><label>Email</label><input type="email" placeholder="tu@correo.com"></div>
+                            <div class="wiz-field"><label>WhatsApp</label><input type="tel" placeholder="+52 ..."></div>
+                            <div class="wiz-field"><label>Empresa (opcional)</label><input type="text" placeholder="Tu empresa"></div>
+                        </div>
+                    </div>
+
+                    <div class="wiz-panel" data-step="4">
+                        <div class="wiz-done">
+                            <i class="fas fa-circle-check"></i>
+                            <h3>¡Listo para enviarse!</h3>
+                            <p>Procesaremos tu propuesta y Fernando se pondrá en contacto en menos de 24 horas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wiz-controls">
+                    <button type="button" class="btn btn-secondary wiz-prev" disabled>← Anterior</button>
+                    <button type="button" class="btn btn-primary wiz-next">Siguiente →</button>
+                    <button type="submit" class="btn btn-primary wiz-submit" style="display:none;">⚡ ENVIAR PROPUESTA</button>
+                </div>
+
+                <div class="wiz-loading" id="wiz-loading">
+                    <div class="wiz-loader"></div>
+                    <span>Procesando datos del evento…</span>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -87,7 +244,7 @@
                     <p style="font-size: 0.9rem; margin-top: 10px;">Llevando el entretenimiento al siguiente nivel.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>NavegaciÃ³n</h4>
+                    <h4>Navegación</h4>
                     <ul>
                         <li><a href="preventas.html">Preventas</a></li>
                         <li><a href="servicios.html">Servicios</a></li>
@@ -100,13 +257,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>DiseÃ±o y ProducciÃ³n: Fernando RodrÃ­guez de la Chesnaye. | Todos los derechos reservados.</p>
+                <p>Diseño y Producción: Fernando Rodríguez de la Chesnaye. | Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/525640013266?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20producciÃ³n" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/525640013266?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20producción" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
+        <span class="wa-text">¡Chatea con nosotros!</span>
     </a>
 
     <script src="main.js"></script>
