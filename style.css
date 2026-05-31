@@ -1600,11 +1600,21 @@ body.theme-interactive .metric-plus {
 
 /* WhatsApp V2: expandible con radar */
 body.theme-interactive .whatsapp-float {
-    padding: 0 18px 0 0;
+    padding: 0;
     width: 60px;
     border-radius: 30px;
     overflow: hidden;
+    justify-content: flex-start;
     animation: wa-radar 2.5s ease-out infinite;
+    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body.theme-interactive .whatsapp-float i {
+    flex-shrink: 0;
+    width: 60px;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
 }
 
 body.theme-interactive .whatsapp-float:hover {
@@ -1613,11 +1623,17 @@ body.theme-interactive .whatsapp-float:hover {
 
 body.theme-interactive .wa-text {
     display: inline-block;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
     opacity: 0;
-    transition: opacity 0.3s ease 0.15s;
+    transition: opacity 0.3s ease 0.15s, max-width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-body.theme-interactive .whatsapp-float:hover .wa-text { opacity: 1; }
+body.theme-interactive .whatsapp-float:hover .wa-text {
+    opacity: 1;
+    max-width: 180px;
+}
 
 @keyframes wa-radar {
     0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.7),
