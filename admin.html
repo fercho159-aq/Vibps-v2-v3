@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | ViBPS Antisocial Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="ad-body">
+
+    <!-- ============================================================
+         SIDEBAR
+    ============================================================ -->
+    <aside class="ad-sidebar" id="ad-sidebar">
+        <div class="ad-brand">
+            <img src="assets/images/logo-nuevo.png" alt="ViBPS">
+            <div>
+                <span class="ad-brand-name">ViBPS</span>
+                <span class="ad-brand-tag">ADMIN PANEL</span>
+            </div>
+        </div>
+
+        <nav class="ad-nav">
+            <a href="#" class="ad-nav-link active" data-section="overview">
+                <i class="fas fa-chart-line"></i> Resumen
+            </a>
+            <a href="#" class="ad-nav-link" data-section="pedidos">
+                <i class="fas fa-receipt"></i> Pedidos
+            </a>
+            <a href="#" class="ad-nav-link" data-section="eventos">
+                <i class="fas fa-calendar-plus"></i> Eventos
+            </a>
+            <a href="#" class="ad-nav-link" data-section="analytics">
+                <i class="fas fa-chart-bar"></i> Analíticas
+            </a>
+        </nav>
+
+        <div class="ad-sidebar-footer">
+            <a href="index.html" class="ad-link-back">
+                <i class="fas fa-arrow-left"></i> Volver al sitio
+            </a>
+            <button id="ad-reset-demo" class="ad-btn-ghost" title="Reiniciar datos demo">
+                <i class="fas fa-redo"></i> Reset demo
+            </button>
+        </div>
+    </aside>
+
+    <!-- ============================================================
+         MAIN
+    ============================================================ -->
+    <main class="ad-main">
+
+        <!-- TOPBAR -->
+        <header class="ad-topbar">
+            <button class="ad-menu-toggle" id="ad-menu-toggle" aria-label="Menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="ad-topbar-info">
+                <h1 class="ad-page-title">Dashboard</h1>
+                <span class="ad-page-sub">Control central · ViBPS Antisocial Club</span>
+            </div>
+            <div class="ad-topbar-right">
+                <div class="ad-status-pill">
+                    <span class="ad-dot"></span> En vivo
+                </div>
+                <div class="ad-avatar">F</div>
+            </div>
+        </header>
+
+        <!-- ============================================================
+             SECTION: OVERVIEW (KPIs)
+        ============================================================ -->
+        <section class="ad-section active" id="section-overview">
+
+            <div class="ad-kpis">
+                <div class="ad-kpi ad-kpi-primary">
+                    <div class="ad-kpi-head">
+                        <span class="ad-kpi-label">Ingresos totales</span>
+                        <i class="fas fa-dollar-sign ad-kpi-icon"></i>
+                    </div>
+                    <div class="ad-kpi-value" id="kpi-ingresos">$0</div>
+                    <div class="ad-kpi-foot">
+                        <i class="fas fa-arrow-up"></i> Acumulado vida del proyecto
+                    </div>
+                </div>
+
+                <div class="ad-kpi">
+                    <div class="ad-kpi-head">
+                        <span class="ad-kpi-label">Boletos vendidos</span>
+                        <i class="fas fa-ticket-alt ad-kpi-icon"></i>
+                    </div>
+                    <div class="ad-kpi-value" id="kpi-boletos">0</div>
+                    <div class="ad-kpi-foot">Solo pedidos aprobados</div>
+                </div>
+
+                <div class="ad-kpi">
+                    <div class="ad-kpi-head">
+                        <span class="ad-kpi-label">Tasa de conversión</span>
+                        <i class="fas fa-percentage ad-kpi-icon"></i>
+                    </div>
+                    <div class="ad-kpi-value" id="kpi-conversion">0%</div>
+                    <div class="ad-kpi-foot" id="kpi-conversion-detail">0 ventas / 0 clics</div>
+                </div>
+
+                <div class="ad-kpi ad-kpi-event">
+                    <div class="ad-kpi-head">
+                        <span class="ad-kpi-label">Próximo evento</span>
+                        <i class="fas fa-fire ad-kpi-icon"></i>
+                    </div>
+                    <div class="ad-kpi-value" id="kpi-evento">—</div>
+                    <div class="ad-kpi-foot" id="kpi-evento-detail">Sin eventos programados</div>
+                    <div class="ad-kpi-progress">
+                        <div class="ad-kpi-progress-fill" id="kpi-evento-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumen rápido: últimos pedidos + gráfica horas -->
+            <div class="ad-overview-grid">
+                <div class="ad-card ad-overview-chart">
+                    <div class="ad-card-head">
+                        <h2><i class="fas fa-clock"></i> Picos de venta por horario</h2>
+                        <span class="ad-card-sub">Boletos vendidos según hora del día</span>
+                    </div>
+                    <div class="ad-chart-bars" id="ad-chart-horas"></div>
+                </div>
+
+                <div class="ad-card ad-overview-rank">
+                    <div class="ad-card-head">
+                        <h2><i class="fas fa-trophy"></i> Eventos más populares</h2>
+                        <span class="ad-card-sub">Top 5 por boletos vendidos</span>
+                    </div>
+                    <div class="ad-chart-hbars" id="ad-chart-eventos"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION: PEDIDOS
+        ============================================================ -->
+        <section class="ad-section" id="section-pedidos">
+            <div class="ad-card">
+                <div class="ad-card-head">
+                    <h2><i class="fas fa-receipt"></i> Pedidos</h2>
+                    <span class="ad-card-sub">Mostrando <strong id="ad-pedidos-count">0</strong> resultados</span>
+                </div>
+
+                <div class="ad-table-toolbar">
+                    <div class="ad-tabs">
+                        <button class="ad-tab active" data-filter="all">Todos</button>
+                        <button class="ad-tab" data-filter="aprobado">Aprobados</button>
+                        <button class="ad-tab" data-filter="pendiente">Pendientes</button>
+                        <button class="ad-tab" data-filter="cancelado">Cancelados</button>
+                    </div>
+                    <div class="ad-search">
+                        <i class="fas fa-search"></i>
+                        <input type="search" id="ad-search" placeholder="Buscar por ID, cliente o evento...">
+                    </div>
+                </div>
+
+                <div class="ad-table-wrap">
+                    <table class="ad-table">
+                        <thead>
+                            <tr>
+                                <th>ID Pedido</th>
+                                <th>Cliente</th>
+                                <th>Evento</th>
+                                <th class="ad-center">Cant.</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                                <th>Fecha</th>
+                                <th class="ad-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ad-pedidos-body"></tbody>
+                    </table>
+                    <p class="ad-empty" id="ad-pedidos-empty" style="display:none;">No hay ventas registradas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION: EVENTOS (creador)
+        ============================================================ -->
+        <section class="ad-section" id="section-eventos">
+
+            <div class="ad-eventos-grid">
+
+                <div class="ad-card">
+                    <div class="ad-card-head">
+                        <h2><i class="fas fa-calendar-plus"></i> Publicar nuevo evento</h2>
+                        <span class="ad-card-sub">Aparecerá automáticamente en preventas.html</span>
+                    </div>
+                    <form id="ad-event-form" class="ad-form" novalidate>
+                        <div class="ad-form-group">
+                            <label for="ev-nombre">Nombre del evento *</label>
+                            <input type="text" id="ev-nombre" name="nombre" placeholder="Ej. Neon Night Vol. 5" required>
+                        </div>
+                        <div class="ad-form-row">
+                            <div class="ad-form-group">
+                                <label for="ev-fecha">Fecha *</label>
+                                <input type="date" id="ev-fecha" name="fecha" required>
+                            </div>
+                            <div class="ad-form-group">
+                                <label for="ev-estado">Fase de venta</label>
+                                <select id="ev-estado" name="estado">
+                                    <option value="early">Early Bird</option>
+                                    <option value="fase1" selected>Fase 1</option>
+                                    <option value="last">Últimos cupos</option>
+                                    <option value="general">General</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ad-form-row">
+                            <div class="ad-form-group">
+                                <label for="ev-precio">Precio por boleto (MXN) *</label>
+                                <input type="number" id="ev-precio" name="precio" min="0" step="50" placeholder="450" required>
+                            </div>
+                            <div class="ad-form-group">
+                                <label for="ev-cupos">Cupos totales *</label>
+                                <input type="number" id="ev-cupos" name="cupos" min="1" placeholder="200" required>
+                            </div>
+                        </div>
+                        <div class="ad-form-group">
+                            <label for="ev-venue">Venue / Locación</label>
+                            <input type="text" id="ev-venue" name="venue" placeholder="Ej. Terraza Roma Norte · DJ Set Live">
+                        </div>
+                        <div class="ad-form-group">
+                            <label for="ev-imagen">Imagen de portada (URL)</label>
+                            <input type="url" id="ev-imagen" name="imagen" placeholder="https://...">
+                        </div>
+                        <div class="ad-form-group">
+                            <label for="ev-descripcion">Descripción</label>
+                            <textarea id="ev-descripcion" name="descripcion" rows="3" placeholder="Detalles del evento..."></textarea>
+                        </div>
+                        <button type="submit" class="ad-btn-primary">
+                            <i class="fas fa-rocket"></i> Publicar evento
+                        </button>
+                    </form>
+                </div>
+
+                <div class="ad-card">
+                    <div class="ad-card-head">
+                        <h2><i class="fas fa-list"></i> Eventos publicados</h2>
+                        <span class="ad-card-sub">Gestiona tus eventos personalizados</span>
+                    </div>
+                    <div id="ad-eventos-list" class="ad-eventos-list"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION: ANALYTICS
+        ============================================================ -->
+        <section class="ad-section" id="section-analytics">
+            <div class="ad-overview-grid">
+                <div class="ad-card ad-overview-chart">
+                    <div class="ad-card-head">
+                        <h2><i class="fas fa-clock"></i> Picos de venta por horario</h2>
+                        <span class="ad-card-sub">Boletos vendidos según hora del día</span>
+                    </div>
+                    <div class="ad-chart-bars" id="ad-chart-horas-2"></div>
+                </div>
+                <div class="ad-card ad-overview-rank">
+                    <div class="ad-card-head">
+                        <h2><i class="fas fa-trophy"></i> Ranking de eventos</h2>
+                        <span class="ad-card-sub">Por boletos vendidos</span>
+                    </div>
+                    <div class="ad-chart-hbars" id="ad-chart-eventos-2"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         MODAL DETALLE PEDIDO
+    ============================================================ -->
+    <div class="ad-modal" id="ad-detail-modal" aria-hidden="true">
+        <div class="ad-modal-card">
+            <button class="ad-modal-close" id="ad-detail-close" aria-label="Cerrar">&times;</button>
+            <div class="ad-modal-body"></div>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
